@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const controller = require("./controller")
 
-router.get("/", function (req, res) {
-    res.send("<h1>Hello World</h1>")
+router.post("/addProduct", function (req, res, next) {
+    controller.addProduct(req, res, next);
 });
+
+router.post("/deleteProduct", function (req, res, next) {
+
+})
 
 module.exports = router;
